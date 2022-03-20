@@ -1,12 +1,12 @@
 [
-    {
-        "name": "Github",
-        "link": "https://github.com/zerostaticthemes/hugo-serif-theme",
-        "image": "social/github.svg"
-    },
-    {
-        "name": "Twitter",
-        "link": "https://twitter.com/zerostaticio",
-        "image": "social/twitter.svg"
-    }
+  {
+    "image": "social/github.svg",
+    "link": "https://github.com/devnw",
+    "name": "Github"
+  },
+  {
+    "image": "social/twitter.svg",
+    "link": "https://twitter.com/devnw_com",
+    "name": "Twitter"
+  }
 ]
