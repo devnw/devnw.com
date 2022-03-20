@@ -1,0 +1,61 @@
+#!/bin/bash
+#title           :webp_hook
+#description     :This script will find new or modified .jpg, .jpeg, and .png files with git diff-index, and trigger cwebp to generate WebP files for them.
+#author          :@chriskyfung (original), @benjivesterby (modifications)
+#date            :2021-02-24, 2021-12-27 (last updated)
+#version         :2.0
+#usage           :Run this script with Git Bash on Windows or Bash shell on Unix/Linux
+#prerequisite    :Installed Git and Google's CWebP encoder in your environment
+#==============================================================================
+
+# shellcheck disable=SC2209
+SED=sed
+if [[ "$OSTYPE" == "darwin"* ]]
+then
+    if ! which gsed&> /dev/null
+    then
+        printf "gsed is required for MacOS\n"
+        exit 1
+    fi
+    SED=gsed
+fi
+
+images=$(git diff-index --cached --name-only --diff-filter=ACMR HEAD | grep -e .jpg -e .jpeg -e .png -i | $SED 's/ /*/g')
+
+for FILE in $images ;  do 
+
+	orig="$(echo "${FILE}" | $SED  -e 's/\*/ /g' -e 's/^"//' -e 's/"$//')"
+	webp="$(echo "$FILE" | $SED  -e 's/\*/ /g' -e 's/^"//' | $SED  's/.[^.]*$//')".webp
+	log="log_cweb.log"
+
+	if [[ ! -f "$webp" ]]
+	then
+		echo  "$orig --> $webp" | tee -a "$log"
+		cwebp -q 80 "$orig" -o "$webp" -mt -quiet
+
+		git add "$webp"
+
+		origfilename="$(basename "$orig")"
+		webpfilename="$(basename "$webp")"
+
+		if grep -v "$FILE" "cover" &> /dev/null
+		then
+			if grep -v "$FILE" "social" &> /dev/null
+			then
+				refs=$(git diff --cached | grep -e "$origfilename" --exclude-dir=.git --exclude="$log" -Ril ./ | $SED 's/ /*/g')
+				for ref in $refs; do
+					printf "webp ref update: %s\n" "$ref"
+					searchrepl=$(printf "s/%s/%s/g" "$origfilename" "$webpfilename")
+
+					sed "$searchrepl" "$ref" > "$ref.tmp"
+					mv "$ref.tmp" "$ref"
+					rm -f "$ref.tmp"
+					git add "$ref"
+				done
+
+				git reset HEAD "$FILE"
+				rm "$FILE"
+			fi
+		fi
+	fi
+done

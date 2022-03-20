@@ -1,1 +1,9 @@
 .DS_Store
+*cweb.log
+*.tmp
+node_modules/
+resources/_gen/
+public/
+vscode/
+# Local Netlify folder
+.netlify
