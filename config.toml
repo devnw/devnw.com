@@ -10,7 +10,7 @@ theme = "hugo-hero-theme"
     min = "0.92.0"
     
 [params]
-  google_analytics_id=""
+  google_analytics_id="G-EWECF5S6Q3"
 
   [params.logo]
     mobile = "images/logo-mobile.svg"
@@ -19,18 +19,18 @@ theme = "hugo-hero-theme"
     desktop = "images/logo.svg"
     desktop_height = "29px"
     desktop_width = "217px"
-    alt = "Hugo Hero"
+    alt = "Developer Network"
 
   [params.homepage_meta_tags]
-    meta_description = "Hero is a multipurpose Hugo theme with fullscreen hero images and page sections. It contains content types for a business or portfolio site."
-    meta_og_title = "Hugo Hero Theme"
+    meta_description = ""
+    meta_og_title = "Developer Network - High tech incubator for Big Data, ML, AI, and Cybersecurity."
     meta_og_type = "website"
-    meta_og_url = "https://hugo-hero.netlify.app"
+    meta_og_url = "https://devnw.com"
     meta_og_image = "https://raw.githubusercontent.com/JugglerX/hugo-hero-theme/master/images/tn.png"
-    meta_og_description = "Hero is a multipurpose Hugo theme with fullscreen hero images and page sections. It contains content types for a business or portfolio site."
+    meta_og_description = ""
     meta_twitter_card = "summary"
-    meta_twitter_site = "@zerostaticio"
-    meta_twitter_creator = "@zerostaticio"
+    meta_twitter_site = "@devnw_com"
+    meta_twitter_creator = "@devnw_com"
 
 [[menu.main]]
 	name = "Services"
