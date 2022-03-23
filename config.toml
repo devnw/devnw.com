@@ -42,10 +42,10 @@ theme = "hugo-hero-theme"
 #     url = "/work/"
 #     weight = 2
 
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 3
+# [[menu.main]]
+#     name = "About"
+#     url = "/about/"
+#     weight = 3
 
 # [[menu.main]]
 #     name = "History"
@@ -58,5 +58,5 @@ theme = "hugo-hero-theme"
     weight = 4
 
 [permalinks]
-  post = "/:year/:month/:day/:slug/"
   pages = "/:filename/"
+  posts = '/::slug'
