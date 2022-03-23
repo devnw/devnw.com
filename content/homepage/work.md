@@ -1,9 +1,11 @@
 ---
-title: 'We Help Business Grow'
+title: 'Open Source Software'
 weight: 1
 background: 'images/kevin-bhagat-461952-unsplash.jpg'
-button: 'Our Work'
-buttonLink: 'work'
+button: 'DEVNW Github Organization'
+buttonLink: 'https://github.com/devnw'
 ---
-
-Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. Numquam dolores mel eu, mea docendi omittantur et, mea ea duis erat. Elit melius cu ius. Per ex novum tantas putant, ei his nullam aliquam apeirian. Aeterno quaestio constituto sea an, no eum intellegat assueverit.
+We are active in the community when it comes to Open Source Software. Our Github
+contains many of the projects that we work on. In the process of developing
+internal research and development projects, we open our non-proprietary code
+to the community.

@@ -6,4 +6,5 @@ button: 'About Us'
 buttonLink: 'about'
 ---
 
-Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo,
+With a background in building secure enterprise applications, we are a team of
+experienced developers who are passionate about building great products.
