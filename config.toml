@@ -32,25 +32,25 @@ theme = "hugo-hero-theme"
     meta_twitter_site = "@devnw_com"
     meta_twitter_creator = "@devnw_com"
 
-[[menu.main]]
-	name = "Services"
-	url = "/services/"
-    weight = 1
+# [[menu.main]]
+# 	name = "Services"
+# 	url = "/services/"
+#     weight = 1
 
-[[menu.main]]
-    name = "Work"
-    url = "/work/"
-    weight = 2
+# [[menu.main]]
+#     name = "Work"
+#     url = "/work/"
+#     weight = 2
 
 [[menu.main]]
     name = "About"
     url = "/about/"
     weight = 3
 
-[[menu.main]]
-    name = "History"
-    url = "/history/"
-    weight = 3
+# [[menu.main]]
+#     name = "History"
+#     url = "/history/"
+#     weight = 3
 
 [[menu.main]]
     name = "Contact"
